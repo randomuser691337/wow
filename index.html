@@ -12,7 +12,8 @@
             font-size: 18px;
             padding: 20px;
             font-family: 'Poppins', Arial;
-            animation: fuck 2s;
+            animation: fuck 1s;
+            padding-top: 44px;
         }
 
         @font-face {
@@ -48,6 +49,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fire 1.5s ease-in-out infinite alternate;
+            margin-bottom: 5px;
         }
 
         @keyframes fire {
@@ -93,8 +95,68 @@
         a:active {
             color: #ddd;
         }
-    </style>
 
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1A1A1A;
+            color: #fff;
+            font-family: 'PoppinsM', Arial;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 3;
+            margin: 2px;
+            transition: 0.04s;
+        }
+
+        button:hover {
+            color: #aaa;
+        }
+
+        button:active {
+            background-color: #3a3a3a;
+        }
+
+        #menu {
+            position: fixed;
+            top: 4px;
+            transform: translate(-50%);
+            left: 50%;
+        }
+
+        #menu2 {
+            background-color: #2a2a2a;
+            padding: 8px;
+            border-radius: 10px;
+            margin-top: 3px;
+        }
+
+        #tw {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            padding: 20px;
+            background-color: #1A1A1A;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .mb {
+            opacity: 70%;
+        }
+
+        .mb:hover {
+            opacity: 100%;
+            color: #fff !important;
+        }
+    </style>
+    <audio id="wannatrymyrosetoycatch">
+        <source src="./assets/evi/up1/silly.mp3" type="audio/mpeg">
+        old ass browser lmao
+    </audio>
 </head>
 <script>
     async function subev() {
@@ -118,11 +180,84 @@
         }
     }
 
+    const audio = document.getElementById("wannatrymyrosetoycatch");
+    audio.volume = 0.5;
+
+    audio.addEventListener("ended", function () {
+        audio.id = "wannatrymyrosetoycatch";
+        audio.currentTime = 0;
+        audio.play();
+    });
+
+    function toggleaudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    function weeee(paragraphId) {
+        var paragraph = document.getElementById(paragraphId);
+        if (paragraph) {
+            var offset = 45;
+            var topOffset = paragraph.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: topOffset, behavior: 'smooth' });
+        } else {
+            console.error(`<!> weeee: couldn't find ${paragraphId}`);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll('img');
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                downloadImage(this);
+            });
+        });
+
+        function downloadImage(imgElement) {
+            const imageUrl = imgElement.src;
+            const fileName = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.target = "_blank"
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    });
 </script>
+<div id="tw" onclick="document.getElementById('tw').style.display = 'none';toggleaudio();">
+    <p class="h1">Content Warning</p>
+    <p>Mentions of abuse, harassment, threats, doxxing, sexual advancements, etc</p>
+    <p>Click/tap anywhere to enter</p>
+</div>
 
 <body>
-    <p class="h1 hell">Welcome to the dumpster fire!</p>
+    <div id="menu">
+        <button onclick="document.getElementById('menu2').style.display = 'block';" class="mb">Menu/Settings</button>
+        <div id="menu2" style="display: none;">
+            <button onclick="weeee('modab');document.getElementById('menu2').style.display = 'none';">Jump to start</button>
+            <button onclick="toggleaudio();document.getElementById('menu2').style.display = 'none';">Toggle music</button>
+            <button style="background-color: #5a1a1a;"
+                onclick="document.getElementById('menu2').style.display = 'none';">Close menu</button>
+        </div>
+    </div>
+    <p class="h1 hell" id="modab">Welcome to the dumpster fire!</p>
+    <p style="font-family: 'PoppinsM', Arial; font-size: 14px;">Created Apr 5, 2024 | Edited Apr 6, 2024</p>
     <p>This essay/thing will go in detail on how Azza/Azzy has been regularly harassing and lying about people.</p>
+    <p>This isn't exactly how I wanted to spend my time, but I felt that this was needed.</p>
+    <p>Note: Click or tap on any image to view/download it.</p>
+    <p>There's 4 parts to this:</p>
+    <p style="margin-bottom: 0px;"><a onclick="weeee('modab');">The mod abuse incident</a></p>
+    <p style="margin-bottom: 0px;"><a onclick="weeee('mwipe');">Moxxie's phone getting erased</a></p>
+    <p style="margin-bottom: 0px;"><a onclick="weeee('sexxx');">The sexual incident 😭</a></p>
+    <p style="margin-bottom: 0px;"><a onclick="weeee('ryze');">Ryze getting harassed</a></p>
+    <p style="margin-bottom: 0px;"><a onclick="weeee('clark');">More bullshit #1</a></p>
+    <p><a onclick="weeee('end');">Ending / Send Evidence</a></p>
     <p>I'm not gonna go over all the drama that's happened, so we're just gonna start from the latest.</p>
     <p>On 4/3/2024, I had Moxxie Dust/Lust Ring move a role in ViasLand (it was used to exploit some permissions.) As a
         result, due to Azza having access to Moxxie Dust's account, he went on a power trip and banned me.</p>
@@ -141,11 +276,22 @@
     <img src="./assets/evi/kysf.png">
     <img src="./assets/evi/insult.png">
     <img src="./assets/evi/starting.png">
-    <p class="h1">Another notable incident!</p>
+    <p class="h1" id="mwipe">Moxxie erase/harassment</p>
+    <p>After the 1st incident, when Moxxie kicked Azza out, Azza responded by remote erasing Moxxie's devices which
+        resulted in him losing all TikTok drafts (~200-400) that went back to 2022.</p>
+    <p>Thankfully, Moxxie had a (mostly) complete backup, but it's still fucked that he decided to do this anyways.</p>
+    <p>More evidence attached below of him threatening a dox and also evidence of the wipe:</p>
+    <img src="./assets/evi/up1/macc1.jpg">
+    <img src="./assets/evi/up1/mdox1.jpg">
+    <p>Note: Max is Moxxie's name</p>
+    <img src="./assets/evi/up1/majordox.png">
+    <p>Note: Azza wiped Moxxie's phones first, and Moxxie responded by wiping Azza's phone in anger.</p>
+    <img src="./assets/evi/up1/wipe.png">
+    <p class="h1" id="sexxx">Another notable incident!</p>
     <p>If you know who ViasLand is, well uhhh... yeah you prob know about this.</p>
     <p>Via's partner got their nudes leaked, and Azza decided to pull this shit after seeing them!</p>
     <img src="./assets/evi/cheat1.png">
-    <p class="h1">Ryze incident</p>
+    <p class="h1" id="ryze">Ryze incident</p>
     <p>In 2022, he wiped someone else's phone (lust_ryze) and also destroyed their TikTok account.</p>
     <img src="./assets/evi/wipe1.png">
     <p>The grand evidence of this:</p>
@@ -156,7 +302,33 @@
     </video>
     <p>Oh, AND JUST FOUND NOW: he's threatening lust_ryze AGAIN!</p>
     <img src="./assets/evi/new.png">
-    <p class="h1">Ending/More</p>
+    <p class="h1" id="clark">More bullshit #1</p>
+    <p>A user uploaded some more evidence using the <a onclick="weeee('end');">form at the bottom</a>, I'm not sure
+        exactly what it's about but feel free to read.</p>
+    <p>Note 1: Moxxie was trying to friend Clark and TTB in order to get info on wether they were gonna raid one of our
+        servers again, as they have a history of doing so then reporting it.</p>
+    <p>Note 2: TTB's goons also doxxed the owner of said server. Why did Clark and TTB do this? BECAUSE THE OWNER HAD AN
+        OPINION!</p>
+    <p>Note 3: To protect the owner's privacy, I'm not gonna show evidence of said dox.</p>
+    <p>More screenshots (in order):</p>
+    <img src="./assets/evi/up1/up1.png">
+    <img src="./assets/evi/up1/up2.png">
+    <img src="./assets/evi/up1/up3.png">
+    <img src="./assets/evi/up1/up4.png">
+    <img src="./assets/evi/up1/up5.png">
+    <img src="./assets/evi/up1/up6.png">
+    <img src="./assets/evi/up1/up7.png">
+    <img src="./assets/evi/up1/up8.png">
+    <img src="./assets/evi/up1/up9.png">
+    <p>Note: Azza also destroyed 2 of Moxxie's devices using FRP lock (evidence above.)</p>
+    <p>If you don't know what FRP lock is, it basically locks a device to someone's account, making it unusable upon
+        reset if you don't have the user/pass, and in this case, both were wiped.</p>
+    <p>Evidence of the raiding (Clark/TTB, not in order):</p>
+    <img src="./assets/evi/up1/r1.png">
+    <img src="./assets/evi/up1/r2.png">
+    <img src="./assets/evi/up1/r3.png">
+    <img src="./assets/evi/up1/r4.png">
+    <p class="h1" id="end">Ending/More</p>
     <p>If you want to add evidence, please use <a href="https://catbox.moe/" target="_blank">Catbox</a> to upload
         evidence.</p>
     <p>After getting the link, use the box below to describe in detail what the evidence is about. Make sure to include
