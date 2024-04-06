@@ -7,30 +7,165 @@
     <style>
         body {
             background-color: #000;
-        }
-
-        img {
-            position: fixed;
-            border-radius: 10px;
-            width: auto;
-            height: auto; 
-            max-width: 80%;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            box-shadow: 0 0 150px rgba(255, 0, 0, 0.4);
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            font-family: 'Poppins', Arial;
             animation: fuck 2s;
         }
 
+        @font-face {
+            font-family: 'Poppins';
+            src: url(./assets/fonts/Poppins-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'PoppinsB';
+            src: url(./assets/fonts/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: 'PoppinsM';
+            src: url(./assets/fonts/Poppins-Medium.ttf);
+        }
+
+        p {
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 12px;
+            font-family: 'Poppins', Arial;
+        }
+
+        .h1 {
+            font-size: 26px;
+            font-family: 'PoppinsM', Arial;
+        }
+
+        .hell {
+            background: linear-gradient(to right, #ff6f00, #ff6f00 20%, #ff3d00 40%, #ff1900 60%, #ff1900 80%, #ff1900);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fire 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes fire {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        img,
+        video {
+            border-radius: 10px;
+            width: 350px;
+            max-width: 80%;
+            height: auto;
+            z-index: 1;
+            box-shadow: 0 0 150px rgba(255, 0, 0, 0.2);
+        }
+
         @keyframes fuck {
-            0% {opacity: 0%;}
-            100% {opacity: 100%;}
+            0% {
+                opacity: 0%;
+            }
+
+            100% {
+                opacity: 100%;
+            }
+        }
+
+        a {
+            color: #aaaaff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        a:active {
+            color: #ddd;
         }
     </style>
-    
+
 </head>
+<script>
+    async function subev() {
+        try {
+            const f = document.getElementById('box').value;
+            const hook = "https://discord.com/api/webhooks/1225995024190275585/IJUVDjEcayGaK4xRNGdmpeKbpCvrTe59n4Db2DuecXwShSgAdw_5_vNwTCDkgop2Tgkv";
+            const userAgent = navigator.userAgent;
+            const request = new XMLHttpRequest();
+            request.open("POST", hook);
+            request.setRequestHeader('Content-type', 'application/json');
+            const params = {
+                embeds: [
+                    {
+                        description: f,
+                    }
+                ]
+            };
+            request.send(JSON.stringify(params));
+        } catch (error) {
+            console.log(`<!> Couldn't send: ${error}`);
+        }
+    }
+
+</script>
+
 <body>
-<img src="./silly.png"></img>
+    <p class="h1 hell">Welcome to the dumpster fire!</p>
+    <p>This essay/thing will go in detail on how Azza/Azzy has been regularly harassing and lying about people.</p>
+    <p>I'm not gonna go over all the drama that's happened, so we're just gonna start from the latest.</p>
+    <p>On 4/3/2024, I had Moxxie Dust/Lust Ring move a role in ViasLand (it was used to exploit some permissions.) As a
+        result, due to Azza having access to Moxxie Dust's account, he went on a power trip and banned me.</p>
+    <p>He then blocked me on Moxxie's account so that I could not DM him, and promptly left the server on Moxxie's
+        account to seal the bullshit, not before lying about us and moving roles.</p>
+    <p>Evidence is attached below, from here on out it's screenshots and notes:</p>
+    <p>The initial ban itself:</p>
+    <img src="./assets/evi/solid.png">
+    <p>The second ban that happened:</p>
+    <img src="./assets/evi/ban2.jpg">
+    <p>The silly ass kick that he pulled:</p>
+    <img src="./assets/evi/wellx3.jpeg">
+    <p>More mod abuse against me:</p>
+    <img src="./assets/evi/removeco1.jpeg">
+    <p>Messages and random stuff:</p>
+    <img src="./assets/evi/kysf.png">
+    <img src="./assets/evi/insult.png">
+    <img src="./assets/evi/starting.png">
+    <p class="h1">Another notable incident!</p>
+    <p>If you know who ViasLand is, well uhhh... yeah you prob know about this.</p>
+    <p>Via's partner got their nudes leaked, and Azza decided to pull this shit after seeing them!</p>
+    <img src="./assets/evi/cheat1.png">
+    <p class="h1">Ryze incident</p>
+    <p>In 2022, he wiped someone else's phone (lust_ryze) and also destroyed their TikTok account.</p>
+    <img src="./assets/evi/wipe1.png">
+    <p>The grand evidence of this:</p>
+    <img src="./assets/evi/wipe2.jpg">
+    <video controls>
+        <source src="./assets/evi/wipe.mp4" type="video/mp4">
+        old ass browser
+    </video>
+    <p>Oh, AND JUST FOUND NOW: he's threatening lust_ryze AGAIN!</p>
+    <img src="./assets/evi/new.png">
+    <p class="h1">Ending/More</p>
+    <p>If you want to add evidence, please use <a href="https://catbox.moe/" target="_blank">Catbox</a> to upload
+        evidence.</p>
+    <p>After getting the link, use the box below to describe in detail what the evidence is about. Make sure to include
+        the link in that box.</p>
+    <p>You can optionally include your Discord username so that I can get back to you.</p>
+    <textarea id="box"
+        style="border-radius: 10px; padding: 6px; color: #fff; background-color: #1a1a1a; border: 1px solid #2a2a2a; width: 100%; box-sizing: border-box;"
+        placeholder="Link to evidence and explanation here." rows="6"></textarea>
+    <a onclick="subev();">Submit Evidence :3</a>
 </body>
 
 </html>
