@@ -40,12 +40,19 @@
         }
 
         .h1 {
-            font-size: 26px;
+            font-size: 23px;
             font-family: 'PoppinsM', Arial;
         }
 
         .hell {
-            background: linear-gradient(to right, #ff6f00, #ff6f00 20%, #ff3d00 40%, #ff1900 60%, #ff1900 80%, #ff1900);
+            background: linear-gradient(to right, 
+  #ff2400 0%,   /* Red */
+  #e81d1d 20%,  /* Red-orange */
+  #ffa500 40%,  /* Orange */
+  #ffff00 60%,  /* Yellow */
+  #7fff00 80%,  /* Chartreuse */
+  #40e0d0 100% /* Turquoise */
+);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -165,90 +172,20 @@
             color: #fff !important;
         }
     </style>
-    <audio id="wannatrymyrosetoycatch">
-        <source src="./assets/evi/up1/silly.mp3" type="audio/mpeg">
-        old ass browser lmao
-    </audio>
 </head>
-<script>
-    const audio = document.getElementById("wannatrymyrosetoycatch");
-    audio.volume = 0.55;
-
-    audio.addEventListener("ended", function () {
-        audio.id = "wannatrymyrosetoycatch";
-        audio.currentTime = 0;
-        audio.play();
-    });
-
-    function fesw(d1, d2) {
-        const dr1 = document.getElementById(d1);
-        const dr2 = document.getElementById(d2);
-        $(dr1).fadeOut(300, function () { $(dr2).fadeIn(300); });
-    }
-
-    function toggleaudio() {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-    }
-
-    function weeee(paragraphId) {
-        var paragraph = document.getElementById(paragraphId);
-        if (paragraph) {
-            var offset = 45;
-            var topOffset = paragraph.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: topOffset, behavior: 'smooth' });
-        } else {
-            console.error(`<!> weeee: couldn't find ${paragraphId}`);
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll('img');
-
-        images.forEach(function (image) {
-            image.addEventListener('click', function () {
-                downloadImage(this);
-            });
-        });
-
-        function downloadImage(imgElement) {
-            const imageUrl = imgElement.src;
-            const fileName = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
-            const link = document.createElement('a');
-            link.href = imageUrl;
-            link.target = "_blank"
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    });
-</script>
-<div id="tw" onclick="fesw('tw', 'div');toggleaudio();">
-    <p class="h1">Content Warning</p>
-    <p>Mentions of abuse, harassment, threats, doxxing, sexual advancements, etc</p>
-    <p>Click/tap anywhere to enter</p>
-</div>
-
 <body>
     <div id="menu">
         <button onclick="document.getElementById('menu2').style.display = 'block';" class="mb">Menu/Settings</button>
         <div id="menu2" style="display: none;">
-            <button onclick="weeee('modab');document.getElementById('menu2').style.display = 'none';">Jump to
-                start</button>
-            <button onclick="toggleaudio();document.getElementById('menu2').style.display = 'none';">Toggle
-                music</button>
+            <p>fuck you moxxie</p>
             <button style="background-color: #5a1a1a;"
                 onclick="document.getElementById('menu2').style.display = 'none';">Close menu</button>
         </div>
     </div>
     <div id="div">
-        <p class="h1 hell" id="modab">Welcome to bullshit, part fucking two!</p>
+        <p class="h1 hell" id="modab">big black testicular balls that stand quite tall</p>
         <p style="font-family: 'PoppinsM', Arial; font-size: 14px;">Created Apr 5, 2024 | Destroyed July 4, 2024</p>
-        <p>Since moxxie wanted to remove me from the thing I helped make, then I guess this site doesn't matter to me!</p>
+        <p>Since moxxie wanted to remove me from the thing I helped make, then I guess this site doesn't matter to you!</p>
         <p style="color: #aaa; font-size: 15px;">^_^ :3 >_<</p>
     </div>
 </body>
